@@ -1,4 +1,4 @@
--- Infos Angular
+/*-- Infos Angular
 npm install -g @angular/cli@latest
 install Node latest version
 install Visual Studio Code
@@ -17,6 +17,8 @@ Add to "styles": [
               "src/styles.css"
             ],
 git init (la racine de l'application)
-mot de passe: BadrCoranique!!
-ecolecoraniquebadre@gmail.com
+mot de passe: BadrCoranique!! 
 git config --global user.email "ecolecoraniquebadre@gmail.com"
+git config --global user.name "Badrquranschool"
+*/
+
