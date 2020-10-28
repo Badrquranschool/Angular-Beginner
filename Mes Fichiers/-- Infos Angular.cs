@@ -20,5 +20,11 @@ git init (la racine de l'application)
 mot de passe: BadrCoranique!! 
 git config --global user.email "ecolecoraniquebadre@gmail.com"
 git config --global user.name "Badrquranschool"
+npm install --save font-awesome angular-font-awesome
+npm uninstall angular-font-awesome
+  "no-string-litral":false (in tslint.json pour désactver les correction rapide)
+  delete this file node_modules/@angular/compiler-cli/ngcc/ngcc_lock_file
+  npm install alertifyjs --save
+  npm install ngx-bootstrap --save
 */
 

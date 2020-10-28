@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderBarComponent implements OnInit {
 
+  today: number = Date.now();
+  loggedinUser : string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  loggedin(){
+    this.loggedinUser = localStorage.getItem('token');
+    return this.loggedinUser;
+  }
+
+  onLogout(){
+    localStorage.removeItem('token');
+  }
 }

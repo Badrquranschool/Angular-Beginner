@@ -1,0 +1,50 @@
+[
+  {
+  "Id":1,
+  "SellRent":2,
+  "Name":"House 01",
+  "Type":"House",
+  "Price":"120000",
+  "Image":"prop(1)"
+  },
+  {
+    "Id":2,
+    "SellRent":2,
+    "Name":"Darkoum 02",
+    "Type":"Villa",
+    "Price":"152200",
+    "Image":"prop(2)"
+  },
+  {
+    "Id":3,
+    "SellRent":3,
+    "Name":"Darna 03",
+    "Type":"Villa",
+    "Price":"999990000",
+    "Image":"prop(3)"
+  },
+  {
+    "Id":4,
+    "SellRent":4,
+    "Name":"White House 04",
+    "Type":"Villa",
+    "Price":"152200",
+    "Image":"prop(4)"
+  },
+  {
+    "Id":5,
+    "SellRent":5,
+    "Name":"Mison Blanche 05",
+    "Type":"Villa",
+    "Price":"250000",
+    "Image":"prop(5)"
+  },
+  {
+    "Id":6,
+    "SellRent":6,
+    "Name":"Berkanoun 06",
+    "Type":"Maroufoun",
+    "Price":"110000",
+    "Image":""
+  }
+]

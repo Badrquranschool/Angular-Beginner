@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+          <div class="form-group col-12">
+            <label for="lbLastName" class="form-label">Nom</label>
+              <input type="text" class="form-control" formControlName="lastName">
+              <span *ngIf="!lastName.valid && (lastName.touched || loginSubmitted)" class="error-block">
+                <span *ngIf="lastName.errors.required">Please provide name !!</span>
+                <span *ngIf="lastName.errors.minlength">Name must be atleast 5 char long</span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbPassWord" class="form-label">Mot de Passe</label>
+              <input type="password" class="form-control" formControlName="password">
+              <span *ngIf="!password.valid && (password.touched || loginSubmitted)" class="error-block">
+                <span *ngIf="password.errors['required']">
+                  Please provide me !!
+                </span>
+                <span *ngIf="password.errors.minlength">
+                  le mot de passe doit avoir plus que 8 char
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <button  type="submit" class="btn btn-primary mr-4">Connecter</button> <!-- [disabled]="!registerForm.valid"  -->
+            <button type="reset" class="btn btn-primary">Annuler</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

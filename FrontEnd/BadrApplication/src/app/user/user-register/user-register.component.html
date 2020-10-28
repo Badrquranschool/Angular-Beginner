@@ -1,0 +1,91 @@
+
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Register
+      </div>
+      <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+            <label for="lbLastName" class="form-label">Nom</label>
+              <input type="text" class="form-control" formControlName="lastName">
+              <span *ngIf="!lastName.valid && (lastName.touched || userSubmitted)" class="error-block">
+                <span *ngIf="lastName.errors.required">Please provide name !!</span>
+                <span *ngIf="lastName.errors.minlength">Name must be atleast 5 char long</span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbFirstName" class="form-label">Prénom</label>
+              <input type="text" class="form-control" formControlName="firstName">
+              <span *ngIf="!firstName.valid && (firstName.touched || userSubmitted)" class="error-block">
+                <span *ngIf="firstName.errors.required">Please provide name !!</span>
+                <span *ngIf="firstName.errors.minlength">Name must be atleast 5 char long</span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" required formControlName="email">
+              <span *ngIf="!email.valid && (email.touched || userSubmitted)" class="error-block">
+                <span *ngIf="email.hasError('required')">
+                  Please provide me !!
+                </span>
+                <span *ngIf="email.hasError('email')">
+                  email incorrect
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbPassWord" class="form-label">Mot de Passe</label>
+              <input type="password" class="form-control" formControlName="password">
+              <span *ngIf="!password.valid && (password.touched || userSubmitted)" class="error-block">
+                <span *ngIf="password.errors['required']">
+                  Please provide me !!
+                </span>
+                <span *ngIf="password.errors.minlength">
+                  le mot de passe doit avoir plus que 8 char
+                </span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbConfirmPassWord" class="form-label">Confirmer mot de passe </label>
+              <input type="password" class="form-control" formControlName="confirmPassword">
+              <span *ngIf="!confirmPassword.valid && (confirmPassword.touched || userSubmitted)" class="error-block">
+                <span *ngIf="confirmPassword.hasError('required')">
+                  Please provide me !!
+                </span>
+              </span>
+              <span *ngIf="registerForm.hasError('notmatched') && confirmPassword.valid" class="error-block">
+                  le mot de passe non conforme
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="lbPhone" class="form-label">Téléphone</label>
+              <input type="text" class="form-control" formControlName="phone">
+              <span *ngIf="!phone.valid && (phone.touched || userSubmitted)" class="error-block">
+                <span *ngIf="phone.errors.required">Please provide name !!</span>
+                <span *ngIf="phone.errors.maxlength">le  numéro téléphone doit avoir 10 chiffres</span>
+              </span>
+          </div>
+
+          <div class="form-group col-12">
+            <button  type="submit" class="btn btn-primary mr-4">Enregistrer</button> <!-- [disabled]="!registerForm.valid"  -->
+            <button type="reset" class="btn btn-primary">Annuler</button>
+          </div>
+
+        </form>
+
+        <div class="form-group col-12">
+          <label for="lbPhone" class="form-label">Valeur : </label> {{registerForm.value | json}}
+          <br>
+          <label for="lbPhone" class="form-label">Etat : </label>{{registerForm.status}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
