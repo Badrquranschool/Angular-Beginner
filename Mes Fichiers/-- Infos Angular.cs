@@ -1,4 +1,5 @@
 /*-- Infos Angular
+https://www.youtube.com/watch?v=p9HKuW-Ycws&list=PL_NVFNExoAxclqXo9fLAeP0G2Qp56Fu8C&index=21
 npm install -g @angular/cli@latest
 install Node latest version
 install Visual Studio Code
@@ -26,5 +27,6 @@ npm uninstall angular-font-awesome
   delete this file node_modules/@angular/compiler-cli/ngcc/ngcc_lock_file
   npm install alertifyjs --save
   npm install ngx-bootstrap --save
+  npm install --save @fortawesome/fontawesome-free
 */
 

@@ -5,7 +5,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +56,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
     HousingService,
