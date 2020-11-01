@@ -41,7 +41,7 @@ export class UserLoginComponent implements OnInit {
       this.alrtifyService.success('Congartilation  : ' + 'Login OK ' + this.lastName.value);
       this.loginForm.reset();
       this.loginSubmitted = false;
-      this.router.navigate(['/']);
+      this.router.navigate(['/listeProprety']);
     // localStorage.setItem('Users',JSON.stringify(this.user));
     }else{
       this.alrtifyService.error('Login NON OK' +' il y des champs qui sont incorrect');
