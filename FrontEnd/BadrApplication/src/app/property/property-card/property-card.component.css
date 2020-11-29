@@ -1,4 +1,24 @@
-.card:hover img {
+.card {
+  min-height: 400px;
+}
+
+
+.card-body h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #0069d9;
+}
+
+.font-highlight {
+  font-style: italic;
+  color: red;
+}
+
+.card-img-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover img{
   transform: scale(1.2,1.2);
   transition-duration: 500ms;
   transition-timing-function: ease-out;
@@ -6,21 +26,13 @@
   opacity: .7;
 }
 
-.card img {
+.card img{
   transform: scale(1,1);
   transition-duration: 500ms;
   transition-timing-function: ease-out;
-  height: 250px;
+  height: 250px
 }
 
-.img-wrapper:hover .member-icons {
-  bottom:0;
-  opacity: 1;
-}
-
-.img-wrapper {
-  overflow: hidden;
-}
 .member-icons{
   position: absolute;
   bottom: -10%;
@@ -31,6 +43,11 @@
   opacity: 0;
 }
 
-.animate {
-transition: all 0.3s ease-in-out;
+.card-img-wrapper:hover .member-icons{
+  bottom: 0;
+  opacity: 1;
+}
+
+.animate{
+  transition: all 0.3s ease-in-out;
 }
